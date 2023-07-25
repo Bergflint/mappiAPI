@@ -1,0 +1,33 @@
+
+#image-container {
+  width: 200px;
+}
+
+/* Style for the "Assignments" section */
+section#assignments {
+    padding: 50px; /* Add padding around the section */
+    text-align: center; /* Center align the section content */
+  }
+  
+  section#assignments h1 {
+    font-size: 36px; /* Set font size for the headline */
+    margin-bottom: 20px; /* Add margin below the headline */
+  }
+  
+  /* Style for the subject grid */
+  .subject-grid {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+    gap: 20px; /* Add gap between grid items */
+  }
+  
+  .subject {
+    padding: 20px; /* Add padding around each subject */
+    background-color: #f8f8f8; /* Set background color for each subject */
+    text-align: center; /* Center align the subject content */
+  }
+  
+  .subject h2 {
+    font-size: 18px; /* Set font size for the subject name */
+    margin: 0; /* Reset margin for the subject name */
+  }
