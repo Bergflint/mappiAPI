@@ -132,4 +132,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
  # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
-del DATABASES['default']['OPTIONS']['sslmode'] #För att inte använda sslmode
+#del DATABASES['default']['OPTIONS']['sslmode'] #För att inte använda sslmode
