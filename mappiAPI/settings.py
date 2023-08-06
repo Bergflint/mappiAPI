@@ -77,10 +77,23 @@ WSGI_APPLICATION = 'mappiAPI.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
 DATABASES = {
-    #'default': dj_database_url.config(conn_max_age=600) #För att en server sak fatta vilken databas man har
-    'default': dj_database_url.config(default=os.environ.get('CLEARDB_DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
+    }
 }
+
+
+#DATABASES = {
+#    #'default': dj_database_url.config(conn_max_age=600) #För att en server sak fatta vilken databas man har
+#    'default': dj_database_url.config(default=os.environ.get('CLEARDB_DATABASE_URL'))
+#}
 
 #CLEARDB_DATABASE_URL = 'mysql://b754f992ee5737:445faf96@eu-cdbr-west-03.cleardb.net/heroku_7bc8c09b21ae919?reconnect=true'
 
