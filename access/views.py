@@ -14,7 +14,7 @@ from django.shortcuts import redirect
 
 
 def sign_up(request):
-    
+    print("hej")
     if request.method == "POST":
         form = SignUpForm(request.POST)
 
