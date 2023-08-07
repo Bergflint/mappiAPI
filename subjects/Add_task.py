@@ -11,15 +11,15 @@ def add_task():
     date = input('date')
     image_id = input('image_id')
     your_solution_id = input('your_solution_id')
-    
+
 
     course_data = {
         'task_id': str(task_id),
         'date': str(date),  # Replace with the desired date format
         'image_id': str(image_id),
         'solution_id': str(your_solution_id),
-        'theoryimage_id': str(theoryimage_id),
-        'difficulty': str(difficulty),  # Replace with the desired difficulty level
+        #'theoryimage_id': str(theoryimage_id),
+        #'difficulty': str(difficulty),  # Replace with the desired difficulty level
         'description': 'Your course description goes here.',
     }
 
