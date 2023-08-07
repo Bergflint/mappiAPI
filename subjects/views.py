@@ -10,6 +10,6 @@ def get_course(request, course):
     if request.method == "GET":
         print(course)
         name = Field.objects.filter(course_id=course).first().name
-        id = Field.objects.filter(course_id=course).first().id
+        id = Field.objects.filter(course_id=course).first().idnum
         
     return JsonResponse({'id': id,'name':name})

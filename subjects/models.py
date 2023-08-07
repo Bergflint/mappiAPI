@@ -11,7 +11,7 @@ class Course(models.Model):
         return self.course_id
     
 class Field(models.Model):
-    id = models.CharField(max_length=100)
+    idnum = models.CharField(max_length=100)
     name = models.TextField()
     course_id = models.CharField(max_length=100)
 
