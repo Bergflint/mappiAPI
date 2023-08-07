@@ -59,5 +59,5 @@ def log_in(request):
 def test(request): #Tar in en request, skickar ut en response
     #En function som till exemepel kan hämta data från databad, ändra data, skicka email
     superusers = User.objects.filter(is_superuser=True)
-    print(str(superusers))
-    return HttpResponse(str(str(superusers))) #Denna function med specifik respons måste kopplas till en url så att när en användare går in på den url:en så startar funktionen och rätt respons ges 
+    print(superusers)
+    return str(superusers) #Denna function med specifik respons måste kopplas till en url så att när en användare går in på den url:en så startar funktionen och rätt respons ges 
