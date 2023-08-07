@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate
 from .forms import SignUpForm
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
+from django.http import JsonResponse
 
 
 
@@ -58,6 +59,6 @@ def log_in(request):
 
 def test(request): #Tar in en request, skickar ut en response
     #En function som till exemepel kan hämta data från databad, ändra data, skicka email
-    superusers = User.objects.filter(is_superuser=True)
-    print(superusers)
-    return str(superusers) #Denna function med specifik respons måste kopplas till en url så att när en användare går in på den url:en så startar funktionen och rätt respons ges 
+    superusers_name = User.objects.filter(is_superuser=True).first().username
+    print(superusers_name)
+    return JsonResponse({'superuser_name': superusers_name}) #Denna function med specifik respons måste kopplas till en url så att när en användare går in på den url:en så startar funktionen och rätt respons ges 
