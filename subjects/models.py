@@ -26,7 +26,7 @@ class Task(models.Model):
     theoryimage_id =  models.CharField(max_length=100)
     difficulty =  models.CharField(max_length=100)
     discription =  models.CharField(max_length=100)
-
+    
     def __str__(self):
         return self.title
 

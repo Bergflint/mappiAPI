@@ -88,7 +88,9 @@ WSGI_APPLICATION = 'mappiAPI.wsgi.application'
 
 DATABASES = {
     #'default': dj_database_url.config(conn_max_age=600) #För att en server sak fatta vilken databas man har
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
+    
+    'DATABASE_URL': dj_database_url.config(default='mysql://r328p2j9hjy102mw:gbf8pp8a9obgkar7@ilzyz0heng1bygi8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/je4urofwi6ha8ykf')
 }
 
 #CLEARDB_DATABASE_URL = 'mysql://b754f992ee5737:445faf96@eu-cdbr-west-03.cleardb.net/heroku_7bc8c09b21ae919?reconnect=true'
