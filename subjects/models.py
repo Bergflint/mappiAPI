@@ -11,12 +11,12 @@ class Course(models.Model):
         return self.course_id
     
 class Field(models.Model):
-    field_id = models.CharField(max_length=100)
-    description = models.TextField()
-    image_id = models.CharField(max_length=100)
+    id = models.CharField(max_length=100)
+    name = models.TextField()
+    course_id = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.field_id
+        return self.name
     
 class Task(models.Model):
     task_id = models.CharField(max_length=100)
