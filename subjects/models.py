@@ -8,7 +8,7 @@ class Course(models.Model):
     image_id = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.title
+        return self.course_id
     
 class Field(models.Model):
     field_id = models.CharField(max_length=100)
@@ -16,7 +16,7 @@ class Field(models.Model):
     image_id = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.title
+        return self.field_id
     
 class Task(models.Model):
     task_id = models.CharField(max_length=100)
@@ -26,7 +26,7 @@ class Task(models.Model):
     theoryimage_id =  models.CharField(max_length=100)
     difficulty =  models.CharField(max_length=100)
     discription =  models.CharField(max_length=100)
-    
+
     def __str__(self):
-        return self.title
+        return self.task_id
 
