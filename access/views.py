@@ -50,11 +50,8 @@ def log_in(request):
     else:
         return render(request, 'access/index.html') 
     
-           
-
-    
-
-
+def home(request):
+    return HttpResponse('Yo whatUp Dawg, u reached the APIhomepage of mappi. U aint getting anything done here.')
 
 
 def test(request): #Tar in en request, skickar ut en response

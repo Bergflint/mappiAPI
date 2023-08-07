@@ -9,7 +9,8 @@ urlpatterns = [
     #Varje url måste avslutas med en backslash
     path('register/',views.sign_up,name='register'),
     path('login/',views.log_in,name='login'),
-    path('test/',views.test,name='test')
+    path('test/',views.test,name='test'),
+    path('',views.home,name='APIhem')
     ]
 
 
